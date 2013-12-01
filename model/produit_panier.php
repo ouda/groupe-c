@@ -1,9 +1,10 @@
 <?php
-include('lib/db.php');
+include('../model/panier.php');
+include('../model/produit.php');
 class Produit_Panier
 {
-	private Produit $produit;
-	private Panier $panier;
+	private $produit;
+	private $panier;
 	private $db;
 	//Constructeur par défaut de la classe Produit_Panier
 	public function __construct(){
@@ -16,7 +17,7 @@ class Produit_Panier
 		return $this->produit;
 	}
 	public function setProduit(Produit $produit){
-		return $this->produit=$produit;
+		 $this->produit=$produit;
 	}
 	/**
 	**	Panier
@@ -25,6 +26,21 @@ class Produit_Panier
 		return $this->panier;
 	}
 	public function setPanier(Panier $Panier){
-		return $this->panier=$panier;
+		 $this->panier=$panier;
+	}
+	public function listeProduit()
+	{
+		$query = 'select * from produit';
+		$res = mysql_query($query);
+        $items = array();
+        while ($ligne = mysql_fetch_assoc($res)) {
+            $item = new Produit();
+            $item->setId($ligne['idProduit']);
+            $item->setLibelle($ligne['libelleProduit']);
+            $item->setDescription($ligne['description']);
+            $item->setPrix($ligne['prix']);
+            $items[] = $item;
+        }
+	return $items;
 	}
 }

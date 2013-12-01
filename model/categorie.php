@@ -17,7 +17,7 @@
     }
     public function setId($id) {
        
-       return  $this->id =$id; 
+       $this->id =$id; 
     }
     /**
 	**  Categorie
@@ -29,7 +29,7 @@
     }
     public function setCategorie($categorie){
  
-       return  $this->categorie =$categorie; 
+       $this->categorie =$categorie; 
     }
 	/**
 	** fonction toString()

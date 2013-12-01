@@ -1,5 +1,4 @@
 <?php
-include('lib/db.php');
 class Commande
 {
 	private Client $client;
@@ -18,7 +17,7 @@ class Commande
 		return $this->client;
 	}
 	public function setClient(Client $client){
-		return $this->id=$id;
+		 $this->id=$id;
 	}
 	/**
 	**	Produit
@@ -27,16 +26,16 @@ class Commande
 		return $this->produit;
 	}
 	public function setProduit($produit){
-		return $this->produit=$produit;
+		 $this->produit=$produit;
 	}
 	/**
 	**	Statut
 	**/
 	public function getStatut(){
-		return $this->statut;
+		 return $this->statut;
 	}
 	public function setStatut($statut){
-		return $this->statut=$statut;
+		 $this->statut=$statut;
 	}
 	/**
 	**	Date Commande
@@ -45,7 +44,7 @@ class Commande
 		return $this->dateCommande;
 	}
 	public function setDateCommande($dateCommande){
-		return $this->dateCommande=$dateCommande;
+		 $this->dateCommande=$dateCommande;
 	}	
 	
 }

@@ -1,9 +1,8 @@
 <?php
-
-include('../lib/db.php');
 include('../model/categorie.php');
 class Produit
 {
+	private $id;
 	private $libelle;
 	private $description;
 	private $prix;
@@ -22,14 +21,17 @@ class Produit
 	public function getId(){
 		return $this->id;
 	}
+	public function setId($id){
+		$this->id=$id;
+	}
 	/**
 	**	libelle
 	**/
 	public function getLibelle(){
 		return $this->libelle;
 	}
-	public function setId($libelle){
-		return $this->libelle=$libelle;
+	public function setLibelle($libelle){
+		 $this->libelle=$libelle;
 	}
 	/**
 	**	description
@@ -38,7 +40,7 @@ class Produit
 		return $this->description;
 	}
 	public function setDescription($description){
-		return $this->description=$description;
+		 $this->description=$description;
 	}
 	/**
 	**	prix
@@ -47,7 +49,7 @@ class Produit
 		return $this->prix;
 	}
 	public function setPrix($prix){
-		return $this->prix=$prix;
+		 $this->prix=$prix;
 	}
 	/**
 	**	couleur
@@ -56,7 +58,7 @@ class Produit
 		return $this->couleur;
 	}
 	public function setCouleur($couleur){
-		return $this->couleur=$couleur;
+		 $this->couleur=$couleur;
 	}
 	/**
 	**	quantite
@@ -65,7 +67,7 @@ class Produit
 		return $this->quantite;
 	}
 	public function setQuantite($quantite){
-		return $this->quantite=$quantite;
+		 $this->quantite=$quantite;
 	}
 	/**
 	** fonction toString()
@@ -73,21 +75,20 @@ class Produit
 	public function __toString(){
 	return $id;
 	}	
-	/*public function listeProduit()
+	public function listeProduit()
 	{
-		$sql = 'select * from produit';
-		$this->db->executeQuery($sql);
+		$query = 'select * from produit';
 		$res = mysql_query($query);
         $items = array();
         while ($ligne = mysql_fetch_assoc($res)) {
-            $item = new item();
-            $item->id = $ligne['idItem'];
-            $item->nom = $ligne['nom'];
+            $item = new Produit();
+            $item->id = $ligne['idProduit'];
+            $item->libelle = $ligne['libelleProduit'];
             $item->description = $ligne['description'];
             $item->prix = $ligne['prix'];
             $items[] = $item;
         }
 	return $items;
-	}*/
+	}
 		
 }

@@ -1,5 +1,4 @@
 <?php
-include('lib/db.php');
 class Panier {
 	private  $id;
 	private  $date_creation;
@@ -19,7 +18,7 @@ class Panier {
 
     public function setId($idpanier){
  
-       return $this->id=$idpanier; 
+       $this->id=$idpanier; 
     }
     /**
 	**  date Creation
@@ -31,7 +30,7 @@ class Panier {
 
     public function setDate_creation($datecreation){
  
-       return $this->date_creation=$datecreation;  
+       $this->date_creation=$datecreation;  
     }
     /**
 	**  prix total
@@ -43,7 +42,7 @@ class Panier {
 
     public function setPrix_total($prix_total){
        
-       return $this->prix_total=$prix_total;  
+       $this->prix_total=$prix_total;  
     }
 	/**
 	** fonction toString()

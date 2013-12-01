@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Ochoco Shop</title>
+		<title>Groupe C store</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!-- Metatag -->
@@ -11,12 +11,12 @@
 		<meta property="og:description" content="Minimalist  Responsive eCommerce Template" />
 	
 		
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/font.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="../view/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../view/css/font.css" />
+		<link rel="stylesheet" href="../view/css/style.css" />
 		
 		<!-- Favicon -->
-		<link rel="icon" href="img/hsfavicon.png">
+		<link rel="icon" href="../img/hsfavicon.png">
 		
 		<!-- =========== -->
 		<!-- Google Font -->
@@ -76,7 +76,7 @@
 					
 					<!-- Cart Updates -->
 					<div class="counter">
-					   <a href="javascript:void(0);"><i class="icon-basket"></i> Votre Panier </a> : <span class="theme" style="color: #fff">100</span>
+					   <a href="javascript:void(0);"><i class="icon-basket"></i> Votre Panier </a>
 					</div>
 					
 					<!-- Bubble Cart Item -->
@@ -125,8 +125,8 @@
 				<div class="span12 clearfix">
 					<div class="top row">
 						
-						<div class="span8 logo text" style="display:none"><a href="index.html">Ochoco Shop</a></div>
-						<div class="span8 logo image"><a href="index.php"><img src="img/highreslogo.png" alt="" /></a></div>
+						<div class="span8 logo text" style="display:none"><a href="../index.php">Groupe C</a></div>
+						<div class="span8 logo image"><a href="index.php"><img src="../view/img/highreslogo.png" alt="" /></a></div>
 						
 						<div class="cart span4">
 							<form action="#" class="topsearch">

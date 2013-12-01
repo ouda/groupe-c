@@ -1,5 +1,6 @@
 <?php
-include('lib/db.php');
+include('../model/espace.php');
+include('../model/panier.php');
  class Client
 {
 	private  $id;
@@ -26,7 +27,7 @@ include('lib/db.php');
     }
     public function setId($id) {
        
-       return  $this->id =$id; 
+         $this->id =$id; 
     }
     /**
 	**  nom_client
@@ -38,7 +39,7 @@ include('lib/db.php');
     }
     public function setNom_client($nomclient){
  
-       return  $this->nom_client =$nomclient; 
+         $this->nom_client =$nomclient; 
     }
     /**
 	**  prenom_client
@@ -50,7 +51,7 @@ include('lib/db.php');
     }
     public function setPrenom_client($prenomclient) {
  
-       return  $this->prenom_client =$prenomclient; 
+         $this->prenom_client =$prenomclient; 
     }
 	/**
 	**  sexe
@@ -62,7 +63,7 @@ include('lib/db.php');
     }
     public function setSexe($sexe){
  
-       return  $this->sexe =$sexe; 
+         $this->sexe =$sexe; 
     }
     /**
 	** Date Naissance
@@ -74,7 +75,7 @@ include('lib/db.php');
     }
     public function setDateNaiss($dateNaiss) {
  
-       return  $this->dateNaiss =$dateNaiss; 
+         $this->dateNaiss =$dateNaiss; 
     }
 	/**
 	** Adresse
@@ -86,7 +87,7 @@ include('lib/db.php');
     }
     public function setAdresse($adresse) {
  
-       return  $this->adresse =$adresse; 
+         $this->adresse =$adresse; 
     }
 	/**
 	** Email
@@ -98,7 +99,7 @@ include('lib/db.php');
     }
     public function setEmail($email) {
  
-       return  $this->email =$email; 
+         $this->email =$email; 
     }
 	/**
 	** Espace Personnel
@@ -110,7 +111,7 @@ include('lib/db.php');
     }
     public function setEspace(Espace $espace) {
  
-       return  $this->espace =$espace; 
+         $this->espace =$espace; 
     }
 	/**
 	** Panier
@@ -122,7 +123,7 @@ include('lib/db.php');
     }
     public function setPanier(Panier $panier) {
  
-       return  $this->panier =$panier; 
+         $this->panier =$panier; 
     }
 	/**
 	** fonction toString()
