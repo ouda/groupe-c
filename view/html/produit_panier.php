@@ -18,7 +18,7 @@ include 'includes/header.inc';
 		<td><?php echo $item->getLibelle();?></td>
 		<td><?php echo $item->getPrix();?></td>
 		<td><?php echo $item->getDescription();?></td>
-		<td></td>
+		<td>categorie</td>
 		<td><input type ="checkbox" name="v1" value="a"/></td>
 		</tr>
 		<?php } ?>
