@@ -3,7 +3,7 @@ include 'includes/header.inc';
 ?>
 <div class="container">
 <form action="" method="" >
-	<table >
+	<table border="1">
 		<tr>
 		<th>Id</th>
 		<th>Libelle</th>
@@ -12,16 +12,16 @@ include 'includes/header.inc';
 		<th>Categorie</th>
 		<th>Validation d'achat</th>
 		</tr>
-		<?php foreach($item as $items){?>
+		<?php foreach($items as $item){?>
 		<tr>
 		<td><?php echo $item->getId();?></td>
-		<td><?php echo $item->getId();?></td>
-		<td><?php echo $item->getId();?></td>
-		<td><?php echo $item->getId();?></td>
-		<td><?php echo $item->getId();?></td>
-		<td><input type ="checkbox" name="v1" value="a" ></td>
+		<td><?php echo $item->getLibelle();?></td>
+		<td><?php echo $item->getPrix();?></td>
+		<td><?php echo $item->getDescription();?></td>
+		<td></td>
+		<td><input type ="checkbox" name="v1" value="a"/></td>
 		</tr>
-		<?php}?>
+		<?php } ?>
 	</table>
 	<br/>Nbre d'achats:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="button" value="Validation d'achat"/>&nbsp;&nbsp;&nbsp;&nbsp;
