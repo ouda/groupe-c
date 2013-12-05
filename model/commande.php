@@ -47,4 +47,21 @@ class Commande
 		 $this->dateCommande=$dateCommande;
 	}	
 	
+	public function listeCommandes()
+	{
+		$query = 'select * from commande';
+		$res = mysql_query($query);
+        $items = array();
+        while ($ligne = mysql_fetch_assoc($res)) {
+            $cmd = new Commande();
+           // $cmd->setClient($ligne['client']);
+           // $cmd->setProduit($ligne['produit']);
+		   
+            $cmd->setStatut($ligne['Statut']);
+            $cmd->setDateCommande($ligne['dateCommande']);
+            $items=array('statut'=> $cmd->getStatut(),'dateCommande'=> $cmd->getDateCommande());
+        }
+	return $items;
+	}
+	
 }
